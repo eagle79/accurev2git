@@ -31,6 +31,11 @@ The following tools are required for running the script:
 * Python (the script has no non-standard dependencies)
 
 ## Usage
+Before running, customize config.py with mapping information. Without the 
+`AUTHOR_MAP` configuration, default mapping will be performed, but this is rarely
+going to give the results you want. When running the utility, the transaction
+history will be compared to `AUTHOR_MAP` and any missing AccuRev user mappings
+will be listed prior to beginning the conversion.
 ```
 migrate.py [-h] [--since SINCE] [-u ACCUREV_USER] [-p ACCUREV_PASS] accurevBranch repoLocation
 
